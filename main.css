@@ -1,0 +1,135 @@
+:root{
+  --bg: #000000;
+  /* Palette from provided image (left -> right) */
+  --sand: #F9DBB8; /* pale sand */
+  --peach: #E9BDB1;
+  --rose: #DDA0B6;
+  --mauve: #C987B3;
+  --purple: #9E3FA8;
+  --deep-purple: #7B2B8A;
+
+  --text: var(--sand); /* main text should use sandish colour */
+  --muted: #C9B79F;
+  --accent: var(--purple); /* use palette purple for accents */
+  --header-height: 64px;
+  --filter-height: 120px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: 'Source Sans Pro', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Layout - center the main card */
+main{display:flex;align-items:center;justify-content:center;min-height:80vh;padding:2rem}
+
+.card{
+    width:100%;
+    max-width:820px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:14px;
+    padding:2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    text-align:center;
+    margin-top:1rem;
+}
+
+.avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);box-shadow:0 6px 18px rgba(0,0,0,0.6);}
+
+h1{margin:0.8rem 0 0.2rem;color:var(--accent);font-size:1.9rem}
+h2{margin:0;color:var(--text);font-weight:600}
+p{color:var(--text);line-height:1.5;margin:0.6rem 0}
+
+.top-nav{
+    display:flex;
+    gap:1rem;
+    justify-content:flex-start;
+    align-items:center;
+    padding:0 1.25rem;
+    height:var(--header-height);
+    position:fixed;
+    top:0;left:0;right:0;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    z-index:100;
+}
+.top-nav a{color:var(--accent);text-decoration:none;padding:0.35rem 0.6rem;border-radius:6px}
+.top-nav a.active{font-weight:600; color:var(--accent)}
+
+.nav{margin-top:1rem}
+.nav a{display:inline-block;padding:0.45rem 0.9rem;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none}
+
+.icons{list-style:none;padding:0;margin:1rem 0 0;display:flex;gap:0.6rem;justify-content:center}
+.icons li{display:inline-block}
+.icons a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:8px;color:#ffffff;text-decoration:none;background:rgba(255,255,255,0.01);font-size:1.05rem}
+
+/* Publications page */
+.controls{display:flex;flex-direction:column;align-items:center;gap:0.6rem;margin-top:0.8rem}
+.filters{display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center}
+.filter-btn{background:transparent;border:1px solid var(--accent);color:var(--accent);padding:0.35rem 0.6rem;border-radius:999px;cursor:pointer}
+.filter-btn.active{background:var(--accent);color:#000;border-color:var(--accent)}
+.search{width:100%;max-width:520px;padding:0.6rem;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
+
+.leit{color:var(--muted)}
+.publications{margin-top:1rem;text-align:left;padding-left:1rem}
+.pub-item{padding:0.6rem 0;border-left:3px solid rgba(255,255,255,0.03);margin-bottom:0.75rem}
+.pub-item .title{font-weight:600;color:var(--text)}
+.pub-item .meta{color:var(--muted);margin-top:0.25rem}
+.hidden{display:none !important}
+
+.back-link{margin-top:1rem;text-align:center}
+.back-link a{color:var(--accent);text-decoration:none}
+
+/* Fixed filter bar under the header (always visible on publications page) */
+.sticky-bar{
+  position:fixed;
+  top:var(--header-height);
+  left:0;right:0;
+  z-index:90;
+  padding:0.6rem 1rem;
+  height:var(--filter-height);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,0.92));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.sticky-bar .filters{justify-content:flex-start}
+.sticky-bar h1{margin:0 1rem 0 0;font-size:1.05rem;color:var(--accent)}
+.sticky-bar .controls{flex-direction:column;align-items:center;gap:0.6rem}
+.sticky-bar .search{max-width:520px}
+
+/* Contacts label next to icons */
+.contacts{display:flex;align-items:center;justify-content:center;gap:0.75rem;margin:1rem 0 0}
+.contact-label{font-weight:600;color:var(--muted);margin-right:0.25rem}
+
+/* When on publications page, add top padding so content sits below header + filter bar */
+.pubs-page main{padding-top:calc(var(--header-height) + var(--filter-height) + 1rem)}
+
+/* Responsive */
+@media (max-width:640px){
+  .card{padding:1.2rem}
+  .avatar{width:110px;height:110px}
+  h1{font-size:1.4rem}
+}
+
+/* Layout helpers for content */
+#content {
+  max-width:820px;
+  margin:0 auto;
+  padding:32px;
+  line-height:1.6;
+}
+
+/* Links: use accent color by default */
+a { text-decoration:none; color:var(--accent); }
+a:hover { color:#ff66c9; }
+
+/* Ensure icons remain white */
+.icons a{ color:#ffffff !important; }
