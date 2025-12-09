@@ -29,14 +29,15 @@
     <main>
       <section id="content" class="card" role="main" aria-labelledby="pubs-title">
         <div class="sticky-bar">
-          <h1 id="pubs-title">Publications</h1>
           <div class="controls">
-            <div class="filters" role="toolbar" aria-label="Filter publications">
+            <div class="filters" role="toolbar" aria-label="Filter publications by type">
               <button class="filter-btn active" data-filter="all">All</button>
               <button class="filter-btn" data-filter="paper">Papers</button>
               <button class="filter-btn" data-filter="abstract">Abstracts</button>
               <button class="filter-btn" data-filter="chapter">Chapters</button>
             </div>
+
+            <div class="keyword-filters" id="keyword-filters" role="toolbar" aria-label="Filter publications by keyword"></div>
 
             <input type="search" id="pub-search" class="search" placeholder="Search publications (title, venue, year...)" aria-label="Search publications" />
           </div>
@@ -44,97 +45,97 @@
 
         <ol class="publications" id="publications-list">
 
-          <li class="pub-item" data-type="abstract">
+          <li class="pub-item" data-type="abstract" data-keywords="RSA parietal-cortex">
             <div class="authors">Testa, M., Diomedi, S., Politi, L., De Vitis, M., Filippini, M., <strong>Vaccari, F. E.*</strong>, &amp; Fattori, P. (2025). *: presenting author</div>
             <div class="title"><strong>Encoding visuomotor transformations: representation similarity analysis reveals task-dependent representational dynamics across macaque posterior parietal areas V6A and PEc</strong></div>
             <div class="meta">Abstract, <em>Society for Neuroscience Annual Meeting</em> – San Diego, US.</div>
           </li>
 
-          <li class="pub-item" data-type="abstract">
+          <li class="pub-item" data-type="abstract" data-keywords="dimensionality simulations data-analysis">
             <div class="authors"><strong>Vaccari, F. E.</strong>, Diomedi, S., Bettazzi, E., &amp; Fattori, P. (2025).</div>
             <div class="title"><strong>Benchmarking different methods for neural dimensionality estimation</strong></div>
             <div class="meta">Abstract, <em>Society for Neuroscience Annual Meeting</em> – San Diego, US.</div>
           </li>
 
-          <li class="pub-item" data-type="abstract">
+          <li class="pub-item" data-type="abstract" data-keywords="dimensionality simulations data-analysis">
             <div class="authors"><strong>Vaccari, F. E.</strong>, Diomedi, S., Bettazzi, E., &amp; Fattori, P. (2025).</div>
             <div class="title"><strong>Comparing different criteria for neural dimensionality estimation</strong></div>
             <div class="meta">Abstract, <em>Cognitive Computational Neuroscience Annual Meeting</em> – Amsterdam, The Netherlands.</div>
           </li>
 
-          <li class="pub-item" data-type="abstract">
+          <li class="pub-item" data-type="abstract" data-keywords="dimensionality subspaces simulations data-analysis">
             <div class="authors"><strong>Vaccari, F. E.</strong>, Diomedi, S., Filippini, M., De Vitis, M., &amp; Fattori, P. (2025).</div>
             <div class="title"><strong>Comparative evaluation of O2PLS and optimization-based methods for identifying shared and exclusive neural subspaces</strong></div>
             <div class="meta">Abstract, <em>34th Annual Computational Neuroscience Meeting</em> – Firenze, Italy.</div>
           </li>
           
-          <li class="pub-item" data-type="paper">
+          <li class="pub-item" data-type="paper" data-keywords="reaching parietal-cortex premotor-cortex">
             <div class="authors">De Vitis, M., Filippini, M., Hadjidimitrakis, K., <strong>Vaccari, F. E.</strong>, Diomedi, S., Gamberini, M., Gori, M., Testa, M., Galletti, C., &amp; Fattori, P. (2025).</div>
             <div class="title"><strong>The medial fronto-parietal network of the macaque: Different specializations for spatial parameters of reaching?</strong></div>
             <div class="meta"><em>NeuroImage</em>, 318, 121387. <a href="https://doi.org/10.1016/j.neuroimage.2025.121387">https://doi.org/10.1016/j.neuroimage.2025.121387</a></div>
           </li>
           
-          <li class="pub-item" data-type="paper">
+          <li class="pub-item" data-type="paper" data-keywords="dimensionality subspaces reaching parietal-cortex">
             <div class="authors">Diomedi, S., <strong>Vaccari, F. E.</strong>, Hadjidimitrakis, K., Fattori, P., &amp; Stoianov, I. P. (2025).</div>
             <div class="title"><strong>Integration of Motor Planning and Execution through Latent Structure Reorganization in the Posterior Parietal Cortex</strong></div>
             <div class="meta">Preprint, <em>bioRxiv</em>. <a href="https://doi.org/10.1101/2025.06.10.658832">https://doi.org/10.1101/2025.06.10.658832</a></div>
           </li>
 
-          <li class="pub-item" data-type="paper">
+          <li class="pub-item" data-type="paper" data-keywords="dimensionality simulations data-analysis">
             <div class="authors"><strong>Vaccari, F. E.</strong>, Diomedi, S., Bettazzi, E., Filippini, M., De Vitis, M., Hadjidimitrakis, K., &amp; Fattori, P. (2024).</div>
             <div class="title"><strong>More or fewer latent variables in the high-dimensional data space? That is the question</strong></div>
             <div class="meta">Preprint, <em>bioRxiv</em>. <a href="https://doi.org/10.1101/2024.11.28.625854">https://doi.org/10.1101/2024.11.28.625854</a></div>
           </li>
 
-          <li class="pub-item" data-type="paper">
+          <li class="pub-item" data-type="paper" data-keywords="decoding hidden-markov-model reaching parietal-cortex">
             <div class="authors"><strong>Vaccari, F. E.</strong>, Diomedi, S., De Vitis, M., Filippini, M., &amp; Fattori, P. (2024).</div>
             <div class="title"><strong>Similar neural states, but dissimilar decoding patterns for motor control in parietal cortex.</strong></div>
             <div class="meta"><em>Network Neuroscience (Cambridge, Mass.)</em>, 8(2), 486–516. <a href="https://doi.org/10.1162/netn_a_00364">https://doi.org/10.1162/netn_a_00364</a></div>
           </li>
 
-          <li class="pub-item" data-type="paper">
+          <li class="pub-item" data-type="paper" data-keywords="dataset reaching parietal-cortex">
             <div class="authors">Diomedi, S., <strong>Vaccari, F. E.</strong>, Gamberini, M., De Vitis, M., Filippini, M., &amp; Fattori, P. (2024).</div>
             <div class="title"><strong>Neurophysiological recordings from parietal areas of macaque brain during an instructed-delay reaching task</strong></div>
             <div class="meta"><em>Scientific Data</em>. <a href="https://doi.org/10.1038/s41597-024-03479-7">https://doi.org/10.1038/s41597-024-03479-7</a></div>
           </li>
 
-          <li class="pub-item" data-type="paper">
+          <li class="pub-item" data-type="paper" data-keywords="review parietal-cortex">
             <div class="authors">Fattori, P., De Vitis, M., Filippini, M., <strong>Vaccari, F. E.</strong>, Diomedi, S., Gamberini, M., &amp; Galletti, C. (2024).</div>
             <div class="title"><strong>Visual sensitivity at the service of action control in posterior parietal cortex</strong></div>
             <div class="meta"><em>Frontiers in Physiology</em>, 15, 1408010. <a href="https://doi.org/10.3389/fphys.2024.1408010">https://doi.org/10.3389/fphys.2024.1408010</a></div>
           </li>
 
-          <li class="pub-item" data-type="paper">
+          <li class="pub-item" data-type="paper" data-keywords="review mixed-selectivity parietal-cortex">
             <div class="authors"><strong>Vaccari, F. E.</strong>, Diomedi, S., Filippini, M., Hadjidimitrakis, K., &amp; Fattori, P. (2022).</div>
             <div class="title"><strong>New insights on single-neuron selectivity in the era of population-level approaches</strong></div>
             <div class="meta"><em>Frontiers in Integrative Neuroscience</em>, 16. <a href="https://doi.org/10.3389/fnint.2022.929052">https://doi.org/10.3389/fnint.2022.929052</a></div>
           </li>
 
-          <li class="pub-item" data-type="chapter">
+          <li class="pub-item" data-type="chapter" data-keywords="hidden-markov-model decoding reaching parietal-cortex">
             <div class="authors">Diomedi, S.*, <strong>Vaccari, F. E.*</strong>, Hadjidimitrakis, K., &amp; Fattori, P. (2022). *: equal contribution</div>
             <div class="title"><strong>Using HMM to Model Neural Dynamics and Decode Useful Signals for Neuroprosthetic Control</strong></div>
             <div class="meta">Chapter 3, pages 59–79 in <em>Hidden Markov Models and Applications</em>. Springer Cham. <a href="https://doi.org/10.1007/978-3-030-99142-5">https://doi.org/10.1007/978-3-030-99142-5</a></div>
           </li>
 
-          <li class="pub-item" data-type="paper">
+          <li class="pub-item" data-type="paper" data-keywords="hidden-markov-model reaching parietal-cortex">
             <div class="authors">Diomedi, S.*, <strong>Vaccari, F. E.*</strong>, Galletti, C., Hadjidimitrakis, K., &amp; Fattori, P. (2021). *: equal contribution</div>
             <div class="title"><strong>Motor-like neural dynamics in two parietal areas during arm reaching</strong></div>
             <div class="meta"><em>Progress in Neurobiology</em>, 205, 102116. <a href="https://doi.org/10.1016/j.pneurobio.2021.102116">https://doi.org/10.1016/j.pneurobio.2021.102116</a></div>
           </li>
 
-          <li class="pub-item" data-type="paper">
+          <li class="pub-item" data-type="paper" data-keywords="GLM protocols data-analysis">
             <div class="authors"><strong>Vaccari, F. E.*</strong>, Diomedi, S.*, Filippini, M., Galletti, C., &amp; Fattori, P. (2021). *: equal contribution</div>
             <div class="title"><strong>A Poisson generalized linear model application to disentangle the effects of various parameters on neurophysiological discharges</strong></div>
             <div class="meta"><em>STAR Protocols</em>, 2(2), 100413. <a href="https://doi.org/10.1016/j.xpro.2021.100413">https://doi.org/10.1016/j.xpro.2021.100413</a></div>
           </li>
 
-          <li class="pub-item" data-type="paper">
+          <li class="pub-item" data-type="paper" data-keywords="mixed-selectivity GLM reaching parietal-cortex">
             <div class="authors">Diomedi, S.*, <strong>Vaccari, F. E.*</strong>, Filippini, M., Fattori, P., &amp; Galletti, C. (2020). *: equal contribution</div>
             <div class="title"><strong>Mixed Selectivity in Macaque Medial Parietal Cortex during Eye-Hand Reaching</strong></div>
             <div class="meta"><em>iScience</em>, 23, 101616. <a href="https://doi.org/10.1016/j.isci.2020.101616">https://doi.org/10.1016/j.isci.2020.101616</a></div>
           </li>
 
-          <li class="pub-item" data-type="paper">
+          <li class="pub-item" data-type="paper" data-keywords="mirror-neurons parietal-cortex">
             <div class="authors">Breveglieri, R., <strong>Vaccari, F. E.</strong>, Bosco, A., Gamberini, M., Fattori, P., &amp; Galletti, C. (2019).</div>
             <div class="title"><strong>Neurons modulated by action execution and observation in the macaque medial parietal cortex</strong></div>
             <div class="meta"><em>Current Biology</em>, 29, 1218–1225. <a href="https://doi.org/10.1016/j.cub.2019.02.027">https://doi.org/10.1016/j.cub.2019.02.027</a></div>
